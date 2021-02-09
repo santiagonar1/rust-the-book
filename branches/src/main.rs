@@ -1,5 +1,6 @@
 fn main() {
-    let number = 3;
+    let condition = true;
+    let number = if condition { 4 } else { 6 };
 
     if number < 5 {
         println!("condition was true");
