@@ -12,4 +12,12 @@ fn main() {
     let (x, y, z) = tup;
     println!("Tuple: {}, {}, {}", x, y, z);
     println!("Tuple: {}, {}, {}", tup.0, tup.1, tup.2);
+
+    // Array
+    let a = ["one", "two"];
+    println!("First element array: {}", a[0]);
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("First element array: {}", a[0]);
+    let a = [3; 5]; // Array of 5 elements, all with value 3.
+    println!("First element array: {}", a[0]);
 }
