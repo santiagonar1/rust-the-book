@@ -24,6 +24,8 @@ fn main() {
     let s4 = String::from("hello");
     let len = calculate_length(&s4);
     println!("The length of '{}' is {}.", s4, len);
+    let mut s5 = String::from("hello");
+    change(&mut s5);
 } // Here, x goes out of scope, then s. But because s's value was moved, nothing
   // special happens. Also, s3 goes out of scope and is dropped. s2 goes out of
   // scope but was moved, so nothing happens. s1 goes out of scope and is dropped.
@@ -64,3 +66,7 @@ fn calculate_length(s: &String) -> usize {
     s.len()
 } // Here, s goes out of scope. But because it does not have ownership of what
   // it refers to, nothing happens.
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
