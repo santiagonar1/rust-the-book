@@ -28,14 +28,24 @@ fn value_in_cents(coin: Coin) -> u8 {
 }
 
 fn main() {
-    let coin = Coin::Penny;
-    value_in_cents(coin);
     let coin = Coin::Nickel;
     value_in_cents(coin);
     let coin = Coin::Dime;
     value_in_cents(coin);
     let coin = Coin::Quarter(UsState::Alaska);
     value_in_cents(coin);
+
+    // Equivalent expressions:
     let coin = Coin::Quarter(UsState::Alabama);
-    value_in_cents(coin);
+    match coin {
+        Coin::Quarter(state) => println!("State quarter from {:?}", state),
+        _ => println!("Not a quarter"),
+    }
+
+    let coin = Coin::Penny;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {:?}", state);
+    } else {
+        println!("Not a quarter");
+    }
 }
