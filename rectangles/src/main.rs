@@ -5,12 +5,22 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    // Method
     fn area(&self) -> u32 {
         self.width * self.height
     }
 
+    // Method
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
+    }
+
+    // Associated function (i.e., not 'self' argument)
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            height: size,
+        }
     }
 }
 
@@ -30,9 +40,12 @@ fn main() {
         height: 45,
     };
 
+    let square = Rectangle::square(20);
+
     println!("rect1 is {:?}", rect1);
     println!("rect2 is {:?}", rect2);
     println!("rect3 is {:?}", rect3);
+    println!("square is {:?}", square);
 
     println!(
         "The area of the rectangle is {} square pixels.",
