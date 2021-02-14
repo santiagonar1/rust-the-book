@@ -27,3 +27,5 @@ Here is a short description of what you can find on each project:
 * **coins**: Enums and pattern matching (`match`, `if let`).
 * **restaurant**: Defining Modules to control scope and privacy. It is also
 the first example of a library that I have implemented.
+* **restaurant2**: It is the same code as **restaurant**, but the modules have
+been moved to their own separate files.
