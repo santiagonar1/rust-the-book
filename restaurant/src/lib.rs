@@ -38,6 +38,11 @@ mod back_of_house {
     }
 }
 
+// Bring path in scope
+use crate::front_of_house::hosting;
+// Relative path version:
+// use self::front_of_house::hosting;
+
 pub fn eat_at_restaurant() {
     // Absolute path. Since add_to_waitlist is defined on the
     // same crate as eat_at_reastaurant, we can use the "crate"
@@ -46,6 +51,9 @@ pub fn eat_at_restaurant() {
 
     // Relative path
     front_of_house::hosting::add_to_waitlist();
+
+    // Path that can be used after the brining path in scope with use
+    hosting::add_to_waitlist();
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
