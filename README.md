@@ -25,4 +25,5 @@ Here is a short description of what you can find on each project:
 * **ownsership**: Introduction of how ownership works on Rust.
 * **rectangles**: Example of `struct`, methods and associated functions.
 * **coins**: Enums and pattern matching (`match`, `if let`).
-
+* **restaurant**: Defining Modules to control scope and privacy. It is also
+the first example of a library that I have implemented.
