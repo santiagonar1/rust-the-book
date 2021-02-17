@@ -29,3 +29,5 @@ Here is a short description of what you can find on each project:
 the first example of a library that I have implemented.
 * **restaurant2**: It is the same code as **restaurant**, but the modules have
 been moved to their own separate files.
+* **error_handeling**: It shows how to use `panic!` or `Result<T, E>` to
+handle errors.
